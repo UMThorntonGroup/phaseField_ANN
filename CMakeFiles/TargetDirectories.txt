@@ -1,0 +1,5 @@
+/Users/David/Documents/Work/PRISMS/phaseField/CMakeFiles/prisms_pf_debug.dir
+/Users/David/Documents/Work/PRISMS/phaseField/CMakeFiles/prisms_pf.dir
+/Users/David/Documents/Work/PRISMS/phaseField/CMakeFiles/release.dir
+/Users/David/Documents/Work/PRISMS/phaseField/CMakeFiles/run.dir
+/Users/David/Documents/Work/PRISMS/phaseField/CMakeFiles/debug.dir

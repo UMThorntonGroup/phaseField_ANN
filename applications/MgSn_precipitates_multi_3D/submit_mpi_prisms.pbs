@@ -1,0 +1,29 @@
+#!/bin/bash
+
+#### PBS preamble
+
+#PBS -l nodes=8:ppn=16,pmem=4000mb,walltime=7:00:00:00
+#PBS -o out.txt
+#PBS -e err.txt
+#PBS -m abe
+#PBS -N prec_growth
+#PBS -V
+#PBS -A prismsproject_fluxoe
+#PBS -q fluxoe
+#PBS -l qos=flux
+
+# End PBS Settings
+###############################
+
+#  Change to the directory you submitted from
+if [ -n "$PBS_O_WORKDIR" ]; then cd $PBS_O_WORKDIR; fi
+
+mkdir /scratch/prismsproject_fluxoe/dmontiel/ANN_3D_test_manyps/
+
+cp main /scratch/prismsproject_fluxoe/dmontiel/ANN_3D_test_manyps/
+cp parameters.in /scratch/prismsproject_fluxoe/dmontiel/ANN_3D_test_manyps/
+
+cd /scratch/prismsproject_fluxoe/dmontiel/ANN_3D_test_manyps/
+
+# For mpi run
+mpirun -n 128 ./main
